@@ -1,4 +1,5 @@
-package com.demoQAAPI.pojo;
+package com.demoQAAPI.pojo.old;
+
 
 import lombok.Getter;
 import lombok.Setter;

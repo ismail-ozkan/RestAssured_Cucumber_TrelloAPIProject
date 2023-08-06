@@ -1,7 +1,7 @@
 package com.demoQAAPI.test;
 
-import com.demoQAAPI.pojo.*;
-import com.demoQAAPI.pojo.PostBook;
+import com.demoQAUI.step_definitions.BaseTest;
+import com.demoQAAPI.pojo.old.*;
 import com.github.javafaker.Faker;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;

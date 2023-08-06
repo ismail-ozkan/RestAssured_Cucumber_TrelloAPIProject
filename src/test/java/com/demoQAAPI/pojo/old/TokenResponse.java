@@ -1,4 +1,4 @@
-package com.demoQAAPI.pojo;
+package com.demoQAAPI.pojo.old;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -7,7 +7,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Isbn {
+public class TokenResponse {
 
-    private String isbn;
+    private String token;
 }
