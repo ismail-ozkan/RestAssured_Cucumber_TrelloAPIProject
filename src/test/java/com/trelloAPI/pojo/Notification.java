@@ -1,4 +1,4 @@
-package com.demoQAUI.pojo;
+package com.trelloAPI.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
@@ -7,9 +7,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class BoardMembers {
+public class Notification {
 
-    private String id;
-    private String name;
-    private String username;
+    private Boolean unread;
+    private String idMemberCreator;
 }

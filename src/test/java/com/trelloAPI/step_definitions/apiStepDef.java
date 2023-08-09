@@ -1,10 +1,10 @@
-package com.demoQAUI.step_definitions;
+package com.trelloAPI.step_definitions;
 
-import com.demoQAUI.pojo.Board;
-import com.demoQAUI.pojo.Member;
-import com.demoQAUI.pojo.MemberShips;
-import com.demoQAUI.pojo.Notification;
-import com.demoQAUI.utilities.ConfigurationReader;
+import com.trelloAPI.pojo.Board;
+import com.trelloAPI.pojo.Member;
+import com.trelloAPI.pojo.MemberShips;
+import com.trelloAPI.pojo.Notification;
+import com.trelloAPI.utilities.ConfigurationReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -13,7 +13,7 @@ import org.junit.Assert;
 
 import java.util.List;
 
-import static com.demoQAUI.step_definitions.Hooks.*;
+import static com.trelloAPI.step_definitions.Hooks.*;
 import static io.restassured.RestAssured.*;
 
 public class apiStepDef {

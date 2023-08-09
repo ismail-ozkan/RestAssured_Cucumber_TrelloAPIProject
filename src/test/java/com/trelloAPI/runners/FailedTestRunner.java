@@ -1,4 +1,4 @@
-package com.demoQAUI.runners;
+package com.trelloAPI.runners;
 
 
 import io.cucumber.junit.Cucumber;
@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        glue = "com/apcrm/step_definitions",
+        glue = "com/trelloAPI/step_definitions",
         features = "@target/rerun.txt"
 )
 

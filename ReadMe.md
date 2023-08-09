@@ -127,9 +127,9 @@ This project is a QA automation framework built using Cucumber BDD (Behavior-Dri
 ```
 >
 
-#### 4.Create a package called `com.demoQAUI` under `src/test/java`
+#### 4.Create a package called `com.trelloAPI` under `src/test/java`
 
-> 1. under `com.demoQAUI`, create `pages`, `runners`, `srep_definitions` and `utilities `packages 
+> 1. under `com.trelloAPI`, create `pages`, `runners`, `srep_definitions` and `utilities `packages 
 
 > 2. Add a `configuration.properties` file to store project information in order to avoid hard coding.
      add following information:

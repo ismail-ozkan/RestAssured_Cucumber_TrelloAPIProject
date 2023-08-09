@@ -1,7 +1,7 @@
-package com.demoQAUI.step_definitions;
+package com.trelloAPI.step_definitions;
 
-import com.demoQAUI.utilities.ConfigurationReader;
-import com.demoQAUI.utilities.Driver;
+import com.trelloAPI.utilities.ConfigurationReader;
+import com.trelloAPI.utilities.Driver;
 import io.cucumber.java.*;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
@@ -80,26 +80,5 @@ public class Hooks {
         return keyAndToken;
     }
 
-        /*if (userName.equals("User1")){
-            reqSpec = given()
-                    .accept(ContentType.JSON)
-                    .queryParams("key", key,
-                            "token", token);
-        }
 
-        String key = "";
-        String token = "";
-        switch (userName) {
-            case "User1":
-                key = ConfigurationReader.getProperty("user1ApiKey");
-                token = ConfigurationReader.getProperty("user1ApiToken");
-                break;
-            case "User2":
-                key = ConfigurationReader.getProperty("user2ApiKey");
-                token = ConfigurationReader.getProperty("user2ApiToken");
-                break;
-        }
-        reqSpec = given()
-                .accept(ContentType.JSON)
-                .queryParams("key", key, "token", token);*/
 }

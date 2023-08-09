@@ -1,4 +1,4 @@
-package com.demoQAUI.utilities;
+package com.trelloAPI.utilities;
 
 import org.junit.Assert;
 import org.openqa.selenium.*;
