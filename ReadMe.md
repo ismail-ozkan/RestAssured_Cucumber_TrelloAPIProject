@@ -1,10 +1,10 @@
-# CitizenM task
+# Trello Practice Project
 
-This project is a QA automation framework built using Cucumber BDD (Behavior-Driven Development) framework with Selenium. It provides a structured approach for automating browser tests, ensuring efficient test case management and easier collaboration between QA engineers and stakeholders. Maven as the build automation tool for managing dependencies and executing tests. JUnit for assertion and validation of test results. There is two main step for this framework
+This project is a QA automation framework built using Cucumber BDD (Behavior-Driven Development) framework with RestAssured. It provides a structured approach for automating API tests with Cucumber, ensuring efficient test case management and easier collaboration between QA engineers and stakeholders. Maven as the build automation tool for managing dependencies and executing tests. JUnit for assertion and validation of test results. There is two main step for this framework
 
 
 ### Steps to Create Project
-#### 1.Create a maven project called `demoQAWtihRestAssured`
+#### 1.Create a maven project called `TrelloAPIProject`
 
 #### 2.Under `pom.xml`
 
@@ -23,19 +23,6 @@ This project is a QA automation framework built using Cucumber BDD (Behavior-Dri
 
 ```xml
 <dependencies>
-
-     <dependency>
-          <groupId>org.seleniumhq.selenium</groupId>
-          <artifactId>selenium-java</artifactId>
-          <version>3.141.59</version>
-     </dependency>
-
-     <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
-     <dependency>
-          <groupId>io.github.bonigarcia</groupId>
-          <artifactId>webdrivermanager</artifactId>
-          <version>5.3.1</version>
-     </dependency>
      
      <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
      <dependency>
@@ -70,12 +57,6 @@ This project is a QA automation framework built using Cucumber BDD (Behavior-Dri
           <groupId>org.slf4j</groupId>
           <artifactId>slf4j-simple</artifactId>
           <version>1.7.32</version>
-     </dependency>
-
-     <dependency>
-          <groupId>org.junit.jupiter</groupId>
-          <artifactId>junit-jupiter</artifactId>
-          <version>5.7.2</version>
      </dependency>
 
      <dependency>
@@ -133,12 +114,6 @@ This project is a QA automation framework built using Cucumber BDD (Behavior-Dri
 
 > 2. Add a `configuration.properties` file to store project information in order to avoid hard coding.
      add following information:
-```
-browser=chrome
-username=johnWick
-password=Pass471!
-url=https://demoqa.com/
-```
 
 
 #### 5.Create `resources directory` under project level 
@@ -166,7 +141,6 @@ Your report will be generated under target as HTML Report
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {
-                //"pretty",
                 "html:target/cucumber-report.html",
                 "rerun:target/rerun.txt",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber",
@@ -174,7 +148,7 @@ Your report will be generated under target as HTML Report
         },
 
         features = "src/test/resources/features",
-        glue = "com/demoQAUI/step_definitions",
+        glue = "com/TrelloAPI/step_definitions",
         dryRun =,
         tags = ""
 )
@@ -183,13 +157,13 @@ Your report will be generated under target as HTML Report
 ```
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        glue = "com/demoQAUI/step_definitions",
+        glue = "com/TrelloAPI/step_definitions",
         features = "@target/rerun.txt"
 )
 ```
 
 #### 10.Under `pages` package, create each page of application corresponding `Java Classes` to store each page related web elements to achieve Page Object Model
-> 1. Create BasePage java class and add base page class constructor with following 
+> 1. Create Hooks java class with following 
 ```
  public BasePage() {
         PageFactory.initElements(Driver.getDriver(),this);
